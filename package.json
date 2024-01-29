@@ -6,7 +6,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "test": "jest",
+    "test:watch": "jest -o --watch --coverage=false"
   },
   "dependencies": {
     "@shopify/restyle": "^2.4.2",
@@ -14,12 +16,16 @@
     "core-js": "^3.35.1",
     "expo": "~50.0.4",
     "expo-status-bar": "~1.11.1",
+    "jest": "^29.3.1",
+    "jest-expo": "~50.0.1",
     "react": "18.2.0",
     "react-native": "0.73.2",
     "typescript": "^5.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@testing-library/react-native": "^12.4.3",
+    "@types/jest": "^29.5.11"
   },
   "private": true
 }

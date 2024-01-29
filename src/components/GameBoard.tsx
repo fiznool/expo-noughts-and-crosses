@@ -11,7 +11,7 @@ const initialCells = [
 ];
 const initialTurnDeque = ['O', 'X'];
 
-const Gamecells = () => {
+const GameBoard = () => {
   const [cells, setCells] = useState(structuredClone(initialCells));
   const [turnDeque, setTurnDeque] = useState([...initialTurnDeque]);
 
@@ -93,17 +93,24 @@ const Gamecells = () => {
         {cells.map((row, rowIdx) => (
           <Box flexDirection="row" gap="m">
             {row.map((col, colIdx) => (
-              <GameCell value={col} isDisabled={isGameOver} onPress={() => handleCellPress(rowIdx, colIdx)} />
+              <GameCell
+                id={`${rowIdx},${colIdx}`}
+                value={col}
+                isDisabled={isGameOver}
+                onPress={() => handleCellPress(rowIdx, colIdx)}
+              />
             ))}
           </Box>
         ))}
       </Box>
-      <Text variant="subheader" textAlign="center">
+      <Text accessibilityRole="text" accessibilityLabel="Game status" variant="subheader" textAlign="center">
         {gameStatus}
       </Text>
       <Box height={60} mt="l">
         {isGameOver && (
           <Pressable
+            accessibilityRole="button"
+            accessibilityLabel="Next game button"
             backgroundColor="newGameButtonBackground"
             width={200}
             height="100%"
@@ -122,4 +129,4 @@ const Gamecells = () => {
   );
 };
 
-export default Gamecells;
+export default GameBoard;

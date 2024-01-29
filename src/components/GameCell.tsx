@@ -3,14 +3,17 @@ import Pressable from './primitives/Pressable';
 import Text from './primitives/Text';
 
 type Props = {
+  id: string,
   value: string,
   isDisabled: boolean,
   onPress: () => void,
 };
 
-const GameCell = ({value, isDisabled, onPress}: Props) => {
+const GameCell = ({id, value, isDisabled, onPress}: Props) => {
   return (
     <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={id}
       width={64}
       height={64}
       alignItems="center"
