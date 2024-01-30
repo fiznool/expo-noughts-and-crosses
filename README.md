@@ -47,6 +47,10 @@ To run the app in a web browser:
 1. Start the Metro Bundler: `npm start`
 2. Press 'w' in the terminal to open in a web browser.
 
+## Tests
+
+Tests can be run using `npm test`.
+
 ## Screenshots
 
 ![Demo of game being played on app](assets/demo.gif)
