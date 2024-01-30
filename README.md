@@ -2,6 +2,8 @@
 
 Noughts and Crosses is a mobile and web application developed using Expo. This classic game, also known as Tic-Tac-Toe, allows players to engage in a simple yet fun game of trying to get three of their marks in a row.
 
+The project runs on [Expo](https://docs.expo.dev) and uses [Restyle](https://shopify.github.io/restyle/) for styling.
+
 ## Requirements
 
 Before installing and running the project, ensure you have the following tools installed:
