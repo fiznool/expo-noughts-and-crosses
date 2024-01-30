@@ -62,9 +62,10 @@ const GameBoard = () => {
     <Box gap="s">
       <Box gap="m" mb="l">
         {cells.map((row, rowIdx) => (
-          <Box flexDirection="row" gap="m">
+          <Box key={rowIdx} flexDirection="row" gap="m">
             {row.map((col, colIdx) => (
               <GameCell
+                key={colIdx}
                 id={`${rowIdx},${colIdx}`}
                 value={col}
                 isDisabled={isGameOver}
